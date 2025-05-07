@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Rifath Sharker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        body , html{
+            margin: 0%;
+            height: 100%;
+        }
+        .container-fluid{
+            height: 100vh;
+            display: flex;
+            position: relative;
+        }
+        .left{
+            width: 70%;
+            background-color: #353a40;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            color: white;
+        }
+        .right{
+            width: 30%;
+            background-color:#34d8eb;
+        }
+        .heading{
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            margin-left: 2.5rem;
+        }
+        .about{
+            margin-left: 2.5rem;
+            font-size: 10px;
+            line-height: 1.5;
+            text-align: justify;
+            max-width: 65%;
+        }
+        .CustomDiv{
+            position: absolute;
+            right: 145px;
+            bottom: 0px;
+            width: 230px;
+            height: 375px;
+            display: flex;
+        }
+        .CustomDiv img{
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .CustomDiv:hover img{
+            transform: scale(1.1);
+        }
+        .nav{
+            position: absolute;
+            bottom: 10;
+            width: 841px;
+            height: 40px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active text-white" href="#" id="contactPopover" data-bs-toggle="popover" data-bs-placement="bottom" 
+                   data-bs-html="true" title="Contact Info"
+                   data-bs-content="<p><span>&#x2709;</span> rifat.sarker5432@gmail.com</p><p><span>&#x260E;</span> +8801568699669</p>">
+                    Contacts
+                </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="socialLink.html">Social Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="achievement.html">Achievements</a>
+            </li>
+          </ul>
+        <div class="left">
+            <div class="welcomeText">
+                <h2 class="heading">Hey, I'm Rifath Sharker</h2>
+                <p class="about">I am an engineering student majoring in Computer Science and Engineering (CSE) with a strong interest in programming and problem-solving. Leading teams brings me the most pleasure and I enjoy collaborating with others to innovate and learn together. As a proud Bangladeshi, I value hard work, adaptability and staying motivated in all challenges. I'm always eager to explore new ideas and apply creative solutions to complex problems.</p>
+            </div>
+        </div>
+        <div class="right"></div>
+        <div class="CustomDiv">
+            <img src="./pic.png" alt="My photo">
+        </div>
+    </div>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+</body>
+</html>

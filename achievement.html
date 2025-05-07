@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        .image-container {
+            text-align: center;
+            margin: 20px auto;
+        }
+        .image-container img {
+            max-width: 30%;
+            height: auto;
+            border: 2px solid #000;
+        }
+        .image-description {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+        .pagination-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid" style="background-color: black; color: white;">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active text-white" href="#">Contacts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="socialLink.html">Social Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="achievement.html">Achievements</a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="image-container">
+        <img id="achievementImage" src="./image/first_achievement.jpg" alt="Achievement">
+        <p id="achievementDescription" class="image-description">Intra University Programming contest (solo) Rank: 2nd Runner up</p>
+    </div>
+
+    <div class="pagination-container">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="#" onclick="showImage(0)">1</a></li>
+            <li class="page-item"><a class="page-link" href="#" onclick="showImage(1)">2</a></li>
+            <li class="page-item"><a class="page-link" href="#" onclick="showImage(2)">3</a></li>
+            <li class="page-item"><a class="page-link" href="#" onclick="showImage(3)">4</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const images = [
+            "./image/first_achievement.jpg",
+            "./image/2nd achievement.jpg",
+            "./image/mindstorm_photo.jpg",
+            "./image/icpc_team_photo.jpg"
+        ];
+
+        const descriptions = [
+            "Intra University Programming contest (solo) Rank: 2nd Runner up",
+            "Intra University Programming contest (team) Rank: 1nd Runner up",
+            "Mindstorm 5.0 programming contest (team) Rank: 1nd Runner up",
+            "ICPC Asia Dhaka regional contest 2024"
+        ];
+
+        function showImage(index) {
+            const imgElement = document.getElementById("achievementImage");
+            const descElement = document.getElementById("achievementDescription");
+            imgElement.src = images[index];
+            descElement.textContent = descriptions[index];
+        }
+    </script>
+</body>
+</html>
